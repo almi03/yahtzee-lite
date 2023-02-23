@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- HTML for Yahtzee Lite -->
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Yahtzee Lite</title> 
+      <link rel = "stylesheet" type = "text/css" href = "style.css">
+      <script src = "YahtzeHW.js"></script>
+   </head>
+   <body>
+   <p>
+   Welcome to Yahtzee Lite!</br>
+   <i>Briefly describe game/rules here. Tell the player what to do first.</i>
+   <form action = "#">
+         <input id = "playButton" type = "button" value = "Play">
+		 <input id = "rollButton" type = "button" value = "Roll" disabled>
+    </form>
+   
+   <audio id = "diceRollingAudio" preload = "auto">
+         <source src = "Shake And Roll Dice.mp3" type = "audio/mpeg">
+         Browser does not support audio tag
+	</audio>
+	
+	<div id = "messages"></div>
+	<div id = "gameOverMessage"></div>
+
+		 
+		 
+      <p><img id = "die1" src = "blank.png" alt = "die 1 image">
+         <img id = "die2" src = "blank.png" alt = "die 2 image">
+         <img id = "die3" src = "blank.png" alt = "die 3 image">
+         <img id = "die4" src = "blank.png" alt = "die 4 image">
+         <img id = "die5" src = "blank.png" alt = "die 5 image">
+	  </p>
+	  
+	<form action = "#">
+         <input id = "keeper1" type = "button" value="keep?">
+		 <input id = "keeper2" type = "button" value="keep?">
+		 <input id = "keeper3" type = "button" value="keep?">
+		 <input id = "keeper4" type = "button" value="keep?">
+		 <input id = "keeper5" type = "button" value="keep?">
+      </form>
+	  
+      <br><br>
+	  
+      <div>Describe the keepers buttons here</div>
+	  <br><br>
+	  <div>
+	  Your name here.  
+	  </div>
+   </body>
+</html>
+
