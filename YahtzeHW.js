@@ -12,12 +12,11 @@
 var numberDice = 5;
 var keeper = new Array(numberDice);
 var dieValue = new Array(numberDice);
+var keptValues = []
 
 // current number of rolls by player
 var rollNumber = 0;
  
-
-
 // variables used to refer to page elements
 var dieImages = new Array(numberDice);    // roll die img  
 var messages;                             // "messages" paragraph
@@ -44,19 +43,26 @@ function startGame()
 	 // DCH See start() for how keeper is enabled/disabled
 	 // this is an error
 	 // You should use print statements (console.log) to debug
-	 for (var i = 0; i < numberDice; ++i) {
-	 keeper[i] = false;
-	 dieImages[i] = document.getElementById("die" + (i + 1));
-	 }
-	 rollButton.disabled = false;
-	 rollButton.value = "Roll";
-	 playButton.disabled = true;
+	 //for (var i = 0; i < numberDice; ++i) {
+	 //keeper[i] = false;
+	 //dieImages[i] = document.getElementById("die" + (i + 1));
+	 //}
+	 //rollButton.disabled = false;
+	 //rollButton.value = "Roll";
+	 //playButton.disabled = true;
+	
+	for ( var i = 0; i < numberDice; ++i ) { 
+	   keeper[i] = document.getElementById( "keeper" + (i + 1));
+	   //keeper[i].disabled = false;
+	   keeper[i].addEventListener("click", function () {
+	   	keptValues[i] = dieValue[i]
+	   });	 
+   	}	
 
 	// roll the dice to start the game
 	rollDice();
    
 } // end function startGame
-
 
 // TO DO: complete this function
 // ==========================================================
